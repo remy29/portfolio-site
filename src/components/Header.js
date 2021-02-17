@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import logo from '../images/logo.png'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
     <div className="logo">
-      <span className="icon fa-diamond"></span>
+      <img src={logo} className="icon rainforest-logo"></img>
     </div>
     <div className="content">
       <div className="inner">
         <h1>Arthur Remy</h1>
         <p>
-          Full Stack Web Developer
+          Full Stack Web Developer Located in Vancouver, BC
         </p>
       </div>
     </div>
