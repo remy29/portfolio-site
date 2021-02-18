@@ -5,17 +5,27 @@ import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: "", email: "", message: "" };
+  }
 
   handleSubmit = e => {
-    const changeArticle = this.props.onChangeArticle
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+    /* const changeArticle = this.props.onChangeArticle
     e.preventDefault()
-    changeArticle('thanks')
-    e()
-    /* this.props.onCloseArticle() */
-    /* setTimeout(function(){ 
-      openArticle('thanks') 
-    }, 600); */
+    changeArticle('thanks') */
   };
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     let close = (
@@ -35,7 +45,7 @@ class Main extends React.Component {
         }}
       ></div>
     )
-
+    const { name, email, message } = this.state;
     return (
       <div
         ref={this.props.setWrapperRef}
@@ -124,15 +134,15 @@ class Main extends React.Component {
             <input type="hidden" name="form-name" value="contact" />
             <div className="field half first">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" value={name} onChange={this.handleChange} id="name" />
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input type="email" name="_replyto" id="email" />
+              <input type="email" name="email" value={email} onChange={this.handleChange} id="email" />
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <textarea name="message" value={message} onChange={this.handleChange} id="message" rows="4"></textarea>
             </div>
             <ul className="actions">
               <li>
