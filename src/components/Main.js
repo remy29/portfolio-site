@@ -7,14 +7,13 @@ import pic03 from '../images/pic03.jpg'
 class Main extends React.Component {
 
   handleSubmit = e => {
+    e.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", name: "test", email: "test", message: "test"})
     })
       .catch(error => alert(error));
-
-    e.preventDefault();
     this.props.onOpenArticle('portfolio')
   };
 
