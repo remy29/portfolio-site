@@ -5,6 +5,19 @@ import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
+
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", name: "test", email: "test", message: "test"})
+    })
+      .catch(error => alert(error));
+
+    e.preventDefault();
+    this.props.onOpenArticle('portfolio')
+  };
+
   render() {
     let close = (
       <div
@@ -81,7 +94,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form method="post" action="" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+          <form onSubmit={this.handleSubmit}>
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
             <div className="field half first">
@@ -103,15 +116,6 @@ class Main extends React.Component {
                   value="Send Message" 
                   className="special" 
                 />
-              </li>
-              <li>
-              <button
-                onClick={() => {
-                  this.props.onOpenArticle('portfolio')
-                }}
-              >
-              Portfolio
-              </button>
               </li>
               <li>
                 <input type="reset" value="Reset" />
