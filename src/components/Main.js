@@ -6,28 +6,12 @@ import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
 
-  handleSubmit = e => {
-    console.log(e.target)
-    e.preventDefault() 
-    this.props.onChangeArticle('thanks')
-  }
-
-
   render() {
     let close = (
       <div
         className="close"
         onClick={() => {
           this.props.onCloseArticle()
-        }}
-      ></div>
-    )
-
-    let closeChange = (
-      <div
-        className="close"
-        onClick={() => {
-          this.props.onChangeCloseArticle()
         }}
       ></div>
     )
@@ -79,7 +63,7 @@ class Main extends React.Component {
             <img src={pic02} alt="" />
           </span>
           <p>Your message has been succesfully submitted, thanks!!</p>
-          {closeChange}
+          {close}
         </article>
 
         <article
@@ -119,7 +103,6 @@ class Main extends React.Component {
             action="/submit/"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            /* onSubmit={this.handleSubmit} */
           >
             <input
               type="hidden"

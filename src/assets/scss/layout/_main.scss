@@ -18,6 +18,10 @@
 		z-index: 3;
 		display: none;
 
+		.thanks {
+			width: 90%
+		}
+
 		article {
 			@include vendor('transform', 'translateY(0.25rem)');
 			@include vendor('transition', (

@@ -1,19 +1,22 @@
 import React from 'react'
 import Layout from '../components/layout'
+
 import Header from '../components/Header'
-import Main from '../components/Main2'
+import Main from '../components/Main'
 import Footer from '../components/Footer'
 
-class ThanksPage extends React.Component {
+class Page extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isArticleVisible: true,
-      timeout: true,
-      articleTimeout: true,
-      article: 'thanks',
+      isArticleVisible: false,
+      timeout: false,
+      articleTimeout: false,
+      article: '',
       loading: ''
     }
+    this.handleOpenArticle = this.handleOpenArticle.bind(this)
+    this.handleChangeArticle = this.handleChangeArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
     this.setWrapperRef = this.setWrapperRef.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
@@ -37,8 +40,55 @@ class ThanksPage extends React.Component {
     this.wrapperRef = node;
   }
 
+  handleOpenArticle(article) {
+
+    this.setState({
+      isArticleVisible: !this.state.isArticleVisible,
+      article
+    })
+
+    setTimeout(() => {
+      this.setState({
+        timeout: !this.state.timeout
+      })
+    }, 325)
+
+    setTimeout(() => {
+      this.setState({
+        articleTimeout: !this.state.articleTimeout
+      })
+    }, 350)
+
+  }
+
+  handleChangeArticle(article) {
+
+    this.setState({
+      isArticleVisible: !this.state.isArticleVisible,
+      article
+    })
+
+  }
+
   handleCloseArticle() {
-    window.location.replace("/");
+
+    this.setState({
+      articleTimeout: !this.state.articleTimeout
+    })
+
+    setTimeout(() => {
+      this.setState({
+        timeout: !this.state.timeout
+      })
+    }, 325)
+
+    setTimeout(() => {
+      this.setState({
+        isArticleVisible: !this.state.isArticleVisible,
+        article: ''
+      })
+    }, 350)
+
   }
 
   handleClickOutside(event) {
@@ -60,7 +110,9 @@ class ThanksPage extends React.Component {
               timeout={this.state.timeout}
               articleTimeout={this.state.articleTimeout}
               article={this.state.article}
+              onChangeArticle={this.handleChangeArticle}
               onCloseArticle={this.handleCloseArticle}
+              onChangeCloseArticle={this.handleChangeCloseArticle}
               setWrapperRef={this.setWrapperRef}
             />
             <Footer timeout={this.state.timeout} />
@@ -72,4 +124,4 @@ class ThanksPage extends React.Component {
   }
 }
 
-export default ThanksPage
+export default Page
