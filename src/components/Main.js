@@ -18,7 +18,7 @@ class Main extends React.Component {
     })
       .then(() => this.props.onChangeArticle('thanks'))
       .catch(error => alert(error))
-      e.preventDefault()
+      e.preventDefault()  
   }
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value })
@@ -126,7 +126,7 @@ class Main extends React.Component {
           <form
             name="contact"
             method="post"
-            action="/thanks/"
+            action=""
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
