@@ -16,7 +16,9 @@ class IndexPage extends React.Component {
       loading: 'is-loading'
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
+    this.handleChangeArticle = this.handleChangeArticle.bind(this)
     this.handleCloseArticle = this.handleCloseArticle.bind(this)
+    this.handleChangeCloseArticle = this.handleChangeCloseArticle.bind(this)
     this.setWrapperRef = this.setWrapperRef.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
   }
@@ -60,6 +62,15 @@ class IndexPage extends React.Component {
 
   }
 
+  handleChangeArticle(article) {
+
+    this.setState({
+      isArticleVisible: !this.state.isArticleVisible,
+      article
+    })
+
+  }
+
   handleCloseArticle() {
 
     this.setState({
@@ -78,6 +89,27 @@ class IndexPage extends React.Component {
         article: ''
       })
     }, 350)
+
+  }
+
+  handleChangeCloseArticle() {
+
+    this.setState({
+      articleTimeout: !this.state.articleTimeout
+    })
+
+    setTimeout(() => {
+      this.setState({
+        timeout: !this.state.timeout
+      })
+    }, 325)
+
+    /* setTimeout(() => {
+      this.setState({
+        isArticleVisible: !this.state.isArticleVisible,
+        article: ''
+      })
+    }, 350) */
 
   }
 
@@ -100,8 +132,9 @@ class IndexPage extends React.Component {
               timeout={this.state.timeout}
               articleTimeout={this.state.articleTimeout}
               article={this.state.article}
-              onOpenArticle={this.handleOpenArticle}
+              onChangeArticle={this.handleChangeArticle}
               onCloseArticle={this.handleCloseArticle}
+              onChangeCloseArticle={this.handleChangeCloseArticle}
               setWrapperRef={this.setWrapperRef}
             />
             <Footer timeout={this.state.timeout} />

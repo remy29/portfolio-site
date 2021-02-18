@@ -7,14 +7,13 @@ import pic03 from '../images/pic03.jpg'
 class Main extends React.Component {
 
   handleSubmit = e => {
-    e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name: "test", email: "test", message: "test"})
-    })
-      .catch(error => alert(error));
-    this.props.onOpenArticle('portfolio')
+    const changeArticle = this.props.onChangeArticle
+    e.preventDefault()
+    changeArticle('thanks')
+    /* this.props.onCloseArticle() */
+    /* setTimeout(function(){ 
+      openArticle('thanks') 
+    }, 600); */
   };
 
   render() {
@@ -23,6 +22,15 @@ class Main extends React.Component {
         className="close"
         onClick={() => {
           this.props.onCloseArticle()
+        }}
+      ></div>
+    )
+
+    let closeChange = (
+      <div
+        className="close"
+        onClick={() => {
+          this.props.onChangeCloseArticle()
         }}
       ></div>
     )
@@ -63,6 +71,23 @@ class Main extends React.Component {
         </article>
 
         <article
+          id="thanks"
+          className={`${this.props.article === 'thanks' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
+          <h2 className="major">Thanks</h2>
+          <span className="image main">
+            <img src={pic02} alt="" />
+          </span>
+          <p>
+            Your message has been succesfully submitted, thanks!!
+          </p>
+          {closeChange}
+        </article>
+
+        <article
           id="about"
           className={`${this.props.article === 'about' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
@@ -93,7 +118,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
             <div className="field half first">
