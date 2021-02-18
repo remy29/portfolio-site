@@ -11,7 +11,6 @@ class Main extends React.Component {
   }
 
   handleSubmit = e => {
-    e.preventDefault()
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -19,6 +18,7 @@ class Main extends React.Component {
     })
       .then(() => this.props.onChangeArticle('thanks'))
       .catch(error => alert(error))
+      e.preventDefault()
   }
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value })
