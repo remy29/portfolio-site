@@ -10,8 +10,8 @@ class ThanksPage extends React.Component {
     super(props)
     this.state = {
       isArticleVisible: true,
-      timeout: false,
-      articleTimeout: false,
+      timeout: true,
+      articleTimeout: true,
       article: 'thanks',
       loading: ''
     }
@@ -104,12 +104,12 @@ class ThanksPage extends React.Component {
       })
     }, 325)
 
-    /* setTimeout(() => {
+    setTimeout(() => {
       this.setState({
         isArticleVisible: !this.state.isArticleVisible,
         article: ''
       })
-    }, 350) */
+    }, 350)
 
   }
 
