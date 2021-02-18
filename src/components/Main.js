@@ -103,10 +103,18 @@ class Main extends React.Component {
                   value="Send Message" 
                   className="special" 
                   onClick={() => {
-                    preventDefault();
                     this.props.onOpenArticle('portfolio');
                   }}
                 />
+              </li>
+              <li>
+              <button
+                onClick={() => {
+                  this.props.onOpenArticle('portfolio')
+                }}
+              >
+              Portfolio
+              </button>
               </li>
               <li>
                 <input type="reset" value="Reset" />
