@@ -116,7 +116,7 @@ class Main extends React.Component {
           <form
             name="contact"
             method="post"
-            action="/page-2"
+            action="/"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             /* onSubmit={this.handleSubmit} */
