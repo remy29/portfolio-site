@@ -8,7 +8,8 @@ class Main extends React.Component {
 
   handleSubmit = e => {
     const changeArticle = this.props.onChangeArticle
-    /* e.preventDefault() */
+    e.preventDefault()
+    console.log(e)
     changeArticle('thanks')
     /* this.props.onCloseArticle() */
     /* setTimeout(function(){ 
