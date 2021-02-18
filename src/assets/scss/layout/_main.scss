@@ -22,6 +22,12 @@
 			width: 90%
 		}
 
+		.about-contact {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
 		article {
 			@include vendor('transform', 'translateY(0.25rem)');
 			@include vendor('transition', (

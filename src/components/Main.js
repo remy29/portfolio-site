@@ -3,6 +3,7 @@ import React from 'react'
 import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
+import pdf from '../images/Resume.pdf'
 
 class Main extends React.Component {
 
@@ -14,6 +15,51 @@ class Main extends React.Component {
           this.props.onCloseArticle()
         }}
       ></div>
+    )
+
+    let icons = (
+      <ul className="icons">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/arthur-remy/"
+                target="_blank"
+                rel="noreferrer"
+                className="icon fa-linkedin"
+              >
+                <span className="label">Linkedin</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/remy29"
+                className="icon fa-github"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="label">GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://dev.to/remy29"
+                target="_blank"
+                rel="noreferrer"
+                className="icon fa-pencil"
+              >
+                <span className="label">Dev.to</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/rainforestsake/?hl=en"
+                target="_blank"
+                rel="noreferrer"
+                className="icon fa-instagram"
+              >
+                <span className="label">Instagram</span>
+              </a>
+            </li>
+          </ul>
     )
 
     return (
@@ -29,7 +75,7 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Portfolio</h2>
+          <h2 className="major">Work</h2>
           <span className="image main">
             <img src={pic02} alt="" />
           </span>
@@ -48,6 +94,7 @@ class Main extends React.Component {
             libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
             tempus.
           </p>
+          {icons}
           {close}
         </article>
 
@@ -63,6 +110,7 @@ class Main extends React.Component {
             <img src={pic02} alt="" />
           </span>
           <p>Your message has been succesfully submitted, thanks!!</p>
+          {icons}
           {close}
         </article>
 
@@ -86,6 +134,15 @@ class Main extends React.Component {
             Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit
             amet.
           </p>
+          <div className="about-contact">
+            {icons}
+            <button 
+            type="submit"
+            onClick={() => window.open(pdf, "_blank")}
+          >
+            Resume
+          </button>
+          </div>
           {close}
         </article>
 
@@ -142,48 +199,7 @@ class Main extends React.Component {
               </li>
             </ul>
           </form>
-          <ul className="icons">
-            <li>
-              <a
-                href="https://www.linkedin.com/in/arthur-remy/"
-                target="_blank"
-                rel="noreferrer"
-                className="icon fa-linkedin"
-              >
-                <span className="label">Linkedin</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/remy29"
-                className="icon fa-github"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="label">GitHub</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://dev.to/remy29"
-                target="_blank"
-                rel="noreferrer"
-                className="icon fa-pencil"
-              >
-                <span className="label">Dev.to</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/rainforestsake/?hl=en"
-                target="_blank"
-                rel="noreferrer"
-                className="icon fa-instagram"
-              >
-                <span className="label">Instagram</span>
-              </a>
-            </li>
-          </ul>
+          {icons}
           {close}
         </article>
       </div>

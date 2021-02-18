@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import logo from '../images/logo.png'
-import pdf from '../images/Resume.pdf'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
@@ -22,7 +21,7 @@ const Header = props => (
               props.onOpenArticle('portfolio')
             }}
           >
-            Portfolio
+            Work
           </button>
         </li>
         <li>
@@ -31,17 +30,17 @@ const Header = props => (
               props.onOpenArticle('about')
             }}
           >
-            About Me
+            About
           </button>
         </li>
-        <li>
+        {/* <li>
             <button 
               type="submit"
               onClick={() => window.open(pdf, "_blank")}
             >
               Resume
             </button>
-        </li>
+        </li> */}
         <li>
           <button
             onClick={() => {
