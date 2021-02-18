@@ -81,14 +81,14 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form method="post" action="#">
+          <form method="post" action="https://formspree.io/f/xzbkqagn">
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <input type="email" name="_replyto" id="email" />
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
@@ -96,7 +96,7 @@ class Main extends React.Component {
             </div>
             <ul className="actions">
               <li>
-                <input type="submit" value="Send Message" target="_blank" className="special" />
+                <input type="submit" value="Send Message" className="special" />
               </li>
               <li>
                 <input type="reset" value="Reset" />
@@ -105,7 +105,7 @@ class Main extends React.Component {
           </form>
           <ul className="icons">
             <li>
-              <a href="https://www.linkedin.com/in/arthur-remy/" target="_blank" className="icon fa-linkedin">
+              <a href="https://www.linkedin.com/in/arthur-remy/" target="_blank" rel="noreferrer" className="icon fa-linkedin">
                 <span className="label">Linkedin</span>
               </a>
             </li>
@@ -113,17 +113,19 @@ class Main extends React.Component {
               <a
                 href="https://github.com/remy29"
                 className="icon fa-github"
+                target="_blank" 
+                rel="noreferrer"
               >
                 <span className="label">GitHub</span>
               </a>
             </li>
             <li>
-              <a href="https://dev.to/remy29" target="_blank" className="icon fa-pencil">
+              <a href="https://dev.to/remy29" target="_blank" rel="noreferrer" className="icon fa-pencil">
                 <span className="label">Dev.to</span>
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/rainforestsake/?hl=en" target="_blank" className="icon fa-instagram">
+              <a href="https://www.instagram.com/rainforestsake/?hl=en" target="_blank" rel="noreferrer" className="icon fa-instagram">
                 <span className="label">Instagram</span>
               </a>
             </li>
