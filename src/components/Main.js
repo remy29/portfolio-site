@@ -5,23 +5,13 @@ import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { name: '', email: '', message: '' }
-  }
 
   handleSubmit = e => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state }),
-    })
-      .then(() => this.props.onChangeArticle('thanks'))
-      .catch(error => alert(error))
-      e.preventDefault()  
+    console.log(e.target)
+    e.preventDefault() 
+    this.props.onChangeArticle('thanks')
   }
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
   render() {
     let close = (
@@ -41,7 +31,7 @@ class Main extends React.Component {
         }}
       ></div>
     )
-    const { name, email, message } = this.state
+
     return (
       <div
         ref={this.props.setWrapperRef}
@@ -126,15 +116,14 @@ class Main extends React.Component {
           <form
             name="contact"
             method="post"
-            action=""
+            action={() => this.props.onChangeArticle('thanks')}
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            onSubmit={this.handleSubmit}
+            /* onSubmit={this.handleSubmit} */
           >
             <input
               type="hidden"
               name="bot-field"
-              onChange={this.handleChange}
             />
             <input type="hidden" name="form-name" value="contact" />
             <div className="field half first">
@@ -142,8 +131,6 @@ class Main extends React.Component {
               <input
                 type="text"
                 name="name"
-                value={name}
-                onChange={this.handleChange}
                 id="name"
               />
             </div>
@@ -152,8 +139,6 @@ class Main extends React.Component {
               <input
                 type="email"
                 name="email"
-                value={email}
-                onChange={this.handleChange}
                 id="email"
               />
             </div>
@@ -161,8 +146,6 @@ class Main extends React.Component {
               <label htmlFor="message">Message</label>
               <textarea
                 name="message"
-                value={message}
-                onChange={this.handleChange}
                 id="message"
                 rows="4"
               ></textarea>
