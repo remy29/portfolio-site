@@ -11,6 +11,9 @@ class Main extends React.Component {
   }
 
   handleSubmit = e => {
+    /* const changeArticle = this.props.onChangeArticle
+    e.preventDefault()
+    changeArticle('thanks') */
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -20,9 +23,6 @@ class Main extends React.Component {
       .catch(error => alert(error));
 
     e.preventDefault();
-    /* const changeArticle = this.props.onChangeArticle
-    e.preventDefault()
-    changeArticle('thanks') */
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -129,7 +129,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form onSubmit={this.handleSubmit} method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+          <form onSubmit={this.handleSubmit} name="contact">
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
             <div className="field half first">
