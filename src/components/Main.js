@@ -6,26 +6,22 @@ import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { name: "", email: "", message: "" };
+    super(props)
+    this.state = { name: '', email: '', message: '' }
   }
 
   handleSubmit = e => {
-    /* const changeArticle = this.props.onChangeArticle
     e.preventDefault()
-    changeArticle('thanks') */
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...this.state }),
     })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
+      .then(() => this.props.onChangeArticle('thanks'))
+      .catch(error => alert(error))
+  }
 
-    e.preventDefault();
-  };
-
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  handleChange = e => this.setState({ [e.target.name]: e.target.value })
 
   render() {
     let close = (
@@ -45,7 +41,7 @@ class Main extends React.Component {
         }}
       ></div>
     )
-    const { name, email, message } = this.state;
+    const { name, email, message } = this.state
     return (
       <div
         ref={this.props.setWrapperRef}
@@ -92,9 +88,7 @@ class Main extends React.Component {
           <span className="image main">
             <img src={pic02} alt="" />
           </span>
-          <p>
-            Your message has been succesfully submitted, thanks!!
-          </p>
+          <p>Your message has been succesfully submitted, thanks!!</p>
           {closeChange}
         </article>
 
@@ -129,28 +123,53 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Contact</h2>
-          <form onSubmit={this.handleSubmit} name="contact">
-            <input type="hidden" name="bot-field" />
+          <form
+            name="contact"
+            method="post"
+            action="/thanks/"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={this.handleSubmit}
+          >
+            <input
+              type="hidden"
+              name="bot-field"
+              onChange={this.handleChange}
+            />
             <input type="hidden" name="form-name" value="contact" />
             <div className="field half first">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" value={name} onChange={this.handleChange} id="name" />
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={this.handleChange}
+                id="name"
+              />
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input type="email" name="email" value={email} onChange={this.handleChange} id="email" />
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+                id="email"
+              />
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" value={message} onChange={this.handleChange} id="message" rows="4"></textarea>
+              <textarea
+                name="message"
+                value={message}
+                onChange={this.handleChange}
+                id="message"
+                rows="4"
+              ></textarea>
             </div>
             <ul className="actions">
               <li>
-                <input 
-                  type="submit" 
-                  value="Send Message" 
-                  className="special" 
-                />
+                <input type="submit" value="Send Message" className="special" />
               </li>
               <li>
                 <input type="reset" value="Reset" />
@@ -159,7 +178,12 @@ class Main extends React.Component {
           </form>
           <ul className="icons">
             <li>
-              <a href="https://www.linkedin.com/in/arthur-remy/" target="_blank" rel="noreferrer" className="icon fa-linkedin">
+              <a
+                href="https://www.linkedin.com/in/arthur-remy/"
+                target="_blank"
+                rel="noreferrer"
+                className="icon fa-linkedin"
+              >
                 <span className="label">Linkedin</span>
               </a>
             </li>
@@ -167,19 +191,29 @@ class Main extends React.Component {
               <a
                 href="https://github.com/remy29"
                 className="icon fa-github"
-                target="_blank" 
+                target="_blank"
                 rel="noreferrer"
               >
                 <span className="label">GitHub</span>
               </a>
             </li>
             <li>
-              <a href="https://dev.to/remy29" target="_blank" rel="noreferrer" className="icon fa-pencil">
+              <a
+                href="https://dev.to/remy29"
+                target="_blank"
+                rel="noreferrer"
+                className="icon fa-pencil"
+              >
                 <span className="label">Dev.to</span>
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/rainforestsake/?hl=en" target="_blank" rel="noreferrer" className="icon fa-instagram">
+              <a
+                href="https://www.instagram.com/rainforestsake/?hl=en"
+                target="_blank"
+                rel="noreferrer"
+                className="icon fa-instagram"
+              >
                 <span className="label">Instagram</span>
               </a>
             </li>
