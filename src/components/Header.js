@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import logo from '../images/logo.png'
+import pdf from '../images/Resume.pdf'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
@@ -10,9 +11,7 @@ const Header = props => (
     <div className="content">
       <div className="inner">
         <h1>Arthur Remy</h1>
-        <p>
-          Full Stack Web Developer Located in Vancouver, BC
-        </p>
+        <p>Full Stack Web Developer Located in Vancouver, BC</p>
       </div>
     </div>
     <nav>
@@ -34,6 +33,14 @@ const Header = props => (
           >
             About Me
           </button>
+        </li>
+        <li>
+            <button 
+              type="submit"
+              onClick={() => window.open(pdf, "_blank")}
+            >
+              Resume
+            </button>
         </li>
         <li>
           <button
