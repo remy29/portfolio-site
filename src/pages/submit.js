@@ -42,11 +42,7 @@ class ThanksPage extends React.Component {
   }
 
   handleClickOutside(event) {
-    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-      if (this.state.isArticleVisible) {
-        this.handleCloseArticle();
-      }
-    }
+    window.location.replace("/");
   }
 
   render() {
