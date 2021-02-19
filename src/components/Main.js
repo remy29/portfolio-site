@@ -4,10 +4,74 @@ import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 import pdf from '../images/Resume.pdf'
+import FadeIn from 'react-fade-in';
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      warningEmail: false,
+      warningName: false,
+      warningMessage: false,
+    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.warningMessage = this.warningMessage.bind(this);
+    this.warningMessageFade = this.warningMessageFade.bind(this);
+  }
+
+  warningMessageFade = function (type) {
+
+  }
+
+  warningMessage = function (type) {
+
+    if (this.state.warningMessage && type === "message") {
+      setTimeout(() => {this.setState(({warningMessage: false}))}, 5000)
+      return (
+        <FadeIn>
+          <h6 className="contact-error">Please Write a Message Before Sending</h6>
+        </FadeIn>
+      )
+    }
+    if (this.state.warningEmail && type === "email") {
+      setTimeout(() => {this.setState(({warningEmail: false}))}, 5000)
+      return (
+        <FadeIn>
+          <h6 className="contact-error">Please Enter Your Email Address</h6>
+        </FadeIn>
+        
+      )
+    }
+    if (this.state.warningName && type === "name") {
+      setTimeout(() => {this.setState(({warningName: false}))}, 5000)
+      return (
+        <FadeIn>
+          <h6 className="contact-error">Please Enter Your Name</h6>
+        </FadeIn>
+      )
+    }
+  }
+
+  handleSubmit = function (e) {
+
+    if (!e.target.message.value) {
+      e.preventDefault();
+      this.setState(({warningMessage: true})) 
+    }
+
+    if (!e.target.email.value) {
+      e.preventDefault();
+      this.setState(({warningEmail: true})) 
+    }
+
+    if (!e.target.name.value) {
+      e.preventDefault();
+      this.setState(({warningName: true})) 
+    }
+  }
 
   render() {
+
     let close = (
       <div
         className="close"
@@ -160,6 +224,7 @@ class Main extends React.Component {
             action="/submit/"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
+            onSubmit={this.handleSubmit}
           >
             <input
               type="hidden"
@@ -173,6 +238,9 @@ class Main extends React.Component {
                 name="name"
                 id="name"
               />
+              <div className="warning-div">
+                {this.warningMessage('name')}
+              </div>
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
@@ -181,14 +249,20 @@ class Main extends React.Component {
                 name="email"
                 id="email"
               />
+              <div className="warning-div">
+                {this.warningMessage('email')}
+              </div>
             </div>
-            <div className="field">
+            <div id="message-field" className="field">
               <label htmlFor="message">Message</label>
               <textarea
                 name="message"
                 id="message"
                 rows="4"
               ></textarea>
+            </div>
+            <div className="warning-div">
+              {this.warningMessage('message')}
             </div>
             <ul className="actions">
               <li>

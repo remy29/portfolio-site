@@ -6,6 +6,10 @@
 
 /* Main */
 
+#message-field {
+	margin-bottom: 0%;
+}
+
 	#main {
 		@include vendor('flex-grow', '1');
 		@include vendor('flex-shrink', '1');
@@ -26,6 +30,15 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+		}
+
+		.contact-error {
+			margin-bottom: 0% !important;
+		}
+
+		.warning-div {
+			margin-top: 0.4em !important;
+			height: 0.2em;
 		}
 
 		article {
