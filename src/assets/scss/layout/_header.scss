@@ -255,6 +255,10 @@
         min-width: 10rem;
         max-width: 100%;
 
+        button {
+          margin-left: 12.5%
+        }
+
         li {
           border-left: 0;
           border-top: solid _size(border-width) _palette(border);

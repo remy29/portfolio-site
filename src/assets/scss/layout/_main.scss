@@ -19,7 +19,7 @@
 		display: none;
 
 		.thanks {
-			width: 90%
+			width: 40rem
 		}
 
 		.about-contact {
@@ -114,6 +114,11 @@
 		}
 
 		@include breakpoint(xsmall) {
+
+			.thanks {
+				width: 100%
+			}
+
 			article {
 				@include padding(2rem, 1.5rem, (1rem, 0, 0.5rem, 0));
 			}
