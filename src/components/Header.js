@@ -26,7 +26,7 @@ const Header = props => (
           </button>
         </li>
         <li>
-          <button
+          <button className="portfolio-button"
             onClick={() => {
               props.onOpenArticle('portfolio')
             }}
@@ -34,14 +34,6 @@ const Header = props => (
             Portfolio
           </button>
         </li>
-        {/* <li>
-            <button 
-              type="submit"
-              onClick={() => window.open(pdf, "_blank")}
-            >
-              Resume
-            </button>
-        </li> */}
         <li>
           <button
             onClick={() => {
