@@ -49,6 +49,10 @@
 			height: 0.1em;
 		}
 
+		#portfolio {
+			width: 80%;
+		}
+
 		article {
 			@include vendor('transform', 'translateY(0.25rem)');
 			@include vendor('transition', (

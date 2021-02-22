@@ -14,8 +14,6 @@
 
 		&:before {
 			@include vendor('pointer-events', 'none');
-			background-image: url('../../images/overlay.png'); // comment out 17/18 to take away overlay
-			background-color: _palette(bg-overlay);
 			border-radius: _size(border-radius);
 			content: '';
 			display: block;

@@ -1,8 +1,13 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
+import tadoo from '../images/tadoo-banner.jpg'
+import matchr from '../images/matchr-banner.jpg'
+import scheduler from '../images/scheduler-banner.jpg'
+import jungle from '../images/jungle-banner.jpg'
+import tweeter from '../images/tweeter-banner.jpg'
+import tinyapp from '../images/tinyapp-banner.jpg'
 import pdf from '../images/Resume.pdf'
 import FadeIn from 'react-fade-in'
 
@@ -188,7 +193,9 @@ class Main extends React.Component {
             {linkedInIcon("Tadoo")}
           </div>
           <span className="image main">
-            <img src={pic02} alt="" />
+            <a href="https://github.com/remy29/smart-to-do-list" target="_blank">
+              <img src={tadoo} alt="" />
+            </a>
           </span>
           <h3 className="minor">Stack</h3>
           <p>
@@ -209,7 +216,9 @@ class Main extends React.Component {
             {linkedInIcon("Matchr")}
           </div>
           <span className="image main">
-            <img src={pic02} alt="" />
+            <a href="https://github.com/remy29/matcher" target="_blank">
+              <img src={matchr} alt="" />
+            </a>
           </span>
           <h3 className="minor">Stack</h3>
           <p>
@@ -226,32 +235,13 @@ class Main extends React.Component {
             tempus.
           </p>
           <div className="portfolio-header">
-            <h2 className="minor">Scheduler</h2>
-            {linkedInIcon("Scheduler")}
-          </div>
-          <span className="image main">
-            <img src={pic02} alt="" />
-          </span>
-          <h3 className="minor">Stack</h3>
-          <p>
-            React / Axios / Express.js / Classnames / Normalize / Storybook / PostgreSQL
-          </p>
-          <h3 className="minor">About</h3>
-          <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
-          </p>
-          <div className="portfolio-header">
             <h2 className="minor">Jungle</h2>
             {linkedInIcon("Jungle")}
           </div>
           <span className="image main">
-            <img src={pic02} alt="" />
+            <a href="https://github.com/remy29/jungle" target="_blank">
+              <img src={jungle} alt="" />
+            </a>  
           </span>
           <h3 className="minor">Stack</h3>
           <p>
@@ -268,11 +258,36 @@ class Main extends React.Component {
             tempus.
           </p>
           <div className="portfolio-header">
+            <h2 className="minor">Scheduler</h2>
+            {linkedInIcon("Scheduler")}
+          </div>
+          <span className="image main">
+            <a href="https://github.com/remy29/scheduler" target="_blank">
+              <img src={scheduler} alt="" />
+            </a>  
+          </span>
+          <h3 className="minor">Stack</h3>
+          <p>
+            React / Axios / Express.js / Classnames / Normalize / Storybook / PostgreSQL
+          </p>
+          <h3 className="minor">About</h3>
+          <p>
+            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
+            Pellentesque condimentum sem. In efficitur ligula tate urna.
+            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
+            tempus.
+          </p>
+          <div className="portfolio-header">
             <h2 className="minor">Tweeter</h2>
             {linkedInIcon("Tweeter")}
           </div>
           <span className="image main">
-            <img src={pic02} alt="" />
+            <a href="https://github.com/remy29/tweeter" target="_blank">
+              <img src={tweeter} alt="" />
+            </a>   
           </span>
           <h3 className="minor">Stack</h3>
           <p>
@@ -293,7 +308,9 @@ class Main extends React.Component {
             {linkedInIcon("TinyApp")}
           </div>
           <span className="image main">
-            <img src={pic02} alt="" />
+            <a href="https://github.com/remy29/tinyapp" target="_blank">
+              <img src={tinyapp} alt="" />
+            </a>   
           </span>
           <h3 className="minor">Stack</h3>
           <p>
