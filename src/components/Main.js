@@ -4,7 +4,7 @@ import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 import pdf from '../images/Resume.pdf'
-import FadeIn from 'react-fade-in';
+import FadeIn from 'react-fade-in'
 
 class Main extends React.Component {
   constructor(props) {
@@ -14,36 +14,40 @@ class Main extends React.Component {
       warningName: false,
       warningMessage: false,
     }
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.warningMessage = this.warningMessage.bind(this);
-    this.warningMessageFade = this.warningMessageFade.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.warningMessage = this.warningMessage.bind(this)
+    this.warningMessageFade = this.warningMessageFade.bind(this)
   }
 
-  warningMessageFade = function (type) {
+  warningMessageFade = function(type) {}
 
-  }
-
-  warningMessage = function (type) {
-
-    if (this.state.warningMessage && type === "message") {
-      setTimeout(() => {this.setState(({warningMessage: false}))}, 5000)
+  warningMessage = function(type) {
+    if (this.state.warningMessage && type === 'message') {
+      setTimeout(() => {
+        this.setState({ warningMessage: false })
+      }, 5000)
       return (
         <FadeIn>
-          <h6 className="contact-error">Please Write a Message Before Sending</h6>
+          <h6 className="contact-error">
+            Please Write a Message Before Sending
+          </h6>
         </FadeIn>
       )
     }
-    if (this.state.warningEmail && type === "email") {
-      setTimeout(() => {this.setState(({warningEmail: false}))}, 5000)
+    if (this.state.warningEmail && type === 'email') {
+      setTimeout(() => {
+        this.setState({ warningEmail: false })
+      }, 5000)
       return (
         <FadeIn>
           <h6 className="contact-error">Please Enter Your Email Address</h6>
         </FadeIn>
-        
       )
     }
-    if (this.state.warningName && type === "name") {
-      setTimeout(() => {this.setState(({warningName: false}))}, 5000)
+    if (this.state.warningName && type === 'name') {
+      setTimeout(() => {
+        this.setState({ warningName: false })
+      }, 5000)
       return (
         <FadeIn>
           <h6 className="contact-error">Please Enter Your Name</h6>
@@ -52,26 +56,24 @@ class Main extends React.Component {
     }
   }
 
-  handleSubmit = function (e) {
-
+  handleSubmit = function(e) {
     if (!e.target.message.value) {
-      e.preventDefault();
-      this.setState(({warningMessage: true})) 
+      e.preventDefault()
+      this.setState({ warningMessage: true })
     }
 
     if (!e.target.email.value) {
-      e.preventDefault();
-      this.setState(({warningEmail: true})) 
+      e.preventDefault()
+      this.setState({ warningEmail: true })
     }
 
     if (!e.target.name.value) {
-      e.preventDefault();
-      this.setState(({warningName: true})) 
+      e.preventDefault()
+      this.setState({ warningName: true })
     }
   }
 
   render() {
-
     let close = (
       <div
         className="close"
@@ -81,49 +83,90 @@ class Main extends React.Component {
       ></div>
     )
 
-    let icons = (
+    const linkedInIcon = function (project) {
+
+      let link; 
+
+      switch (project) {
+        case "Matchr": 
+          link = "https://github.com/remy29/matcher";
+          break;
+        case "Tadoo":
+          link = "https://github.com/remy29/smart-to-do-list";
+          break;
+        case "Jungle":
+          link = "https://github.com/remy29/jungle";
+          break;
+        case "Scheduler":
+          link = "https://github.com/remy29/scheduler";
+          break;
+        case "Tweeter":
+          link = "https://github.com/remy29/tweeter";
+          break;
+        case "TinyApp":
+          link = "https://github.com/remy29/tinyapp";
+          break;
+      }
+
+      return (
+        <ul className="icons">
+          <li>
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              className="icon fa-github"
+            >
+              <span className="label">Linkedin</span>
+            </a>
+          </li>
+        </ul>
+      )
+    }
+
+    const icons = (
       <ul className="icons">
-            <li>
-              <a
-                href="https://www.linkedin.com/in/arthur-remy/"
-                target="_blank"
-                rel="noreferrer"
-                className="icon fa-linkedin"
-              >
-                <span className="label">Linkedin</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/remy29"
-                className="icon fa-github"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="label">GitHub</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://dev.to/remy29"
-                target="_blank"
-                rel="noreferrer"
-                className="icon fa-pencil"
-              >
-                <span className="label">Dev.to</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/rainforestsake/?hl=en"
-                target="_blank"
-                rel="noreferrer"
-                className="icon fa-instagram"
-              >
-                <span className="label">Instagram</span>
-              </a>
-            </li>
-          </ul>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/arthur-remy/"
+            target="_blank"
+            rel="noreferrer"
+            className="icon fa-linkedin"
+          >
+            <span className="label">Linkedin</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/remy29"
+            className="icon fa-github"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="label">GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://dev.to/remy29"
+            target="_blank"
+            rel="noreferrer"
+            className="icon fa-pencil"
+          >
+            <span className="label">Dev.to</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/rainforestsake/?hl=en"
+            target="_blank"
+            rel="noreferrer"
+            className="icon fa-instagram"
+          >
+            <span className="label">Instagram</span>
+          </a>
+        </li>
+      </ul>
     )
 
     return (
@@ -139,16 +182,19 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Work</h2>
+          <h2 className="major">Portfolio</h2>
+          <div className="portfolio-header">
+            <h2 className="minor">Tadoo</h2>
+            {linkedInIcon("Tadoo")}
+          </div>
           <span className="image main">
             <img src={pic02} alt="" />
           </span>
+          <h3 className="minor">Stack</h3>
           <p>
-            Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
-            at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent
-            urna nisi, fringila lorem et vehicula lacinia quam. Integer
-            sollicitudin mauris nec lorem luctus ultrices.
+            Node.js / Express.js / HTML5 / SCSS / jQuery / jQuery UI / PostgreSQL 
           </p>
+          <h3 className="minor">About</h3>
           <p>
             Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
             libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
@@ -158,7 +204,117 @@ class Main extends React.Component {
             libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
             tempus.
           </p>
-          {icons}
+          <div className="portfolio-header">
+            <h2 className="minor">Matchr</h2>
+            {linkedInIcon("Matchr")}
+          </div>
+          <span className="image main">
+            <img src={pic02} alt="" />
+          </span>
+          <h3 className="minor">Stack</h3>
+          <p>
+            Node.js / Express.js / HTML5 / SCSS / React / React Native / Sockets.io / PostgreSQL 
+          </p>
+          <h3 className="minor">About</h3>
+          <p>
+            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
+            Pellentesque condimentum sem. In efficitur ligula tate urna.
+            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
+            tempus.
+          </p>
+          <div className="portfolio-header">
+            <h2 className="minor">Scheduler</h2>
+            {linkedInIcon("Scheduler")}
+          </div>
+          <span className="image main">
+            <img src={pic02} alt="" />
+          </span>
+          <h3 className="minor">Stack</h3>
+          <p>
+            React / Axios / Express.js / Classnames / Normalize / Storybook / PostgreSQL
+          </p>
+          <h3 className="minor">About</h3>
+          <p>
+            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
+            Pellentesque condimentum sem. In efficitur ligula tate urna.
+            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
+            tempus.
+          </p>
+          <div className="portfolio-header">
+            <h2 className="minor">Jungle</h2>
+            {linkedInIcon("Jungle")}
+          </div>
+          <span className="image main">
+            <img src={pic02} alt="" />
+          </span>
+          <h3 className="minor">Stack</h3>
+          <p>
+            Ruby on Rails / bcrypt / Bootstrap / Capybara / Poltergeist / Rspec / PostgreSQL
+          </p>
+          <h3 className="minor">About</h3>
+          <p>
+            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
+            Pellentesque condimentum sem. In efficitur ligula tate urna.
+            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
+            tempus.
+          </p>
+          <div className="portfolio-header">
+            <h2 className="minor">Tweeter</h2>
+            {linkedInIcon("Tweeter")}
+          </div>
+          <span className="image main">
+            <img src={pic02} alt="" />
+          </span>
+          <h3 className="minor">Stack</h3>
+          <p>
+            Node.js / Express.js / jQuery / PostgreSQL
+          </p>
+          <h3 className="minor">About</h3>
+          <p>
+            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
+            Pellentesque condimentum sem. In efficitur ligula tate urna.
+            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
+            tempus.
+          </p>
+          <div className="portfolio-header">
+            <h2 className="minor">TinyApp</h2>
+            {linkedInIcon("TinyApp")}
+          </div>
+          <span className="image main">
+            <img src={pic02} alt="" />
+          </span>
+          <h3 className="minor">Stack</h3>
+          <p>
+            Node.js / Express.js / Morgan / EJS / bcrypt
+          </p>
+          <h3 className="minor">About</h3>
+          <p>
+            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
+            Pellentesque condimentum sem. In efficitur ligula tate urna.
+            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
+            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
+            tempus.
+          </p>
+          <div className="about-contact">
+            {icons}
+            <button type="submit" onClick={() => window.open(pdf, '_blank')}>
+              Resume
+            </button>
+          </div>
           {close}
         </article>
 
@@ -200,12 +356,9 @@ class Main extends React.Component {
           </p>
           <div className="about-contact">
             {icons}
-            <button 
-            type="submit"
-            onClick={() => window.open(pdf, "_blank")}
-          >
-            Resume
-          </button>
+            <button type="submit" onClick={() => window.open(pdf, '_blank')}>
+              Resume
+            </button>
           </div>
           {close}
         </article>
@@ -226,44 +379,23 @@ class Main extends React.Component {
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
           >
-            <input
-              type="hidden"
-              name="bot-field"
-            />
+            <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
             <div className="field half first">
               <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-              />
-              <div className="warning-div">
-                {this.warningMessage('name')}
-              </div>
+              <input type="text" name="name" id="name" />
+              <div className="warning-div">{this.warningMessage('name')}</div>
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-              />
-              <div className="warning-div">
-                {this.warningMessage('email')}
-              </div>
+              <input type="email" name="email" id="email" />
+              <div className="warning-div">{this.warningMessage('email')}</div>
             </div>
             <div id="message-field" className="field">
               <label htmlFor="message">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                rows="4"
-              ></textarea>
+              <textarea name="message" id="message" rows="4"></textarea>
             </div>
-            <div className="warning-div">
-              {this.warningMessage('message')}
-            </div>
+            <div className="warning-div">{this.warningMessage('message')}</div>
             <ul className="actions">
               <li>
                 <input type="submit" value="Send Message" className="special" />
