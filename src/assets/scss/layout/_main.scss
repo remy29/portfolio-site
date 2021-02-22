@@ -124,6 +124,15 @@
 		}
 
 		@include breakpoint(small) {
+
+			#portfolio {
+				width: 100%;
+			}
+
+			.thanks {
+				width: 100%
+			}
+
 			article {
 				@include padding(2rem, 2rem, (1.5rem, 0, 0.5rem, 0));
 				.close {
@@ -139,6 +148,10 @@
 		}
 
 		@include breakpoint(xsmall) {
+
+			#portfolio {
+				width: 100%;
+			}
 
 			.thanks {
 				width: 100%
