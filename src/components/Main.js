@@ -341,7 +341,7 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">About</h2>
+          <h2 className="major">About Me</h2>
           <span className="image main profile-pic">
             <img className="profile"src={profile} alt="" />
           </span>
