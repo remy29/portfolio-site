@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
+import profile from '../images/Profile-Pic.png'
 import tadoo from '../images/tadoo-banner.jpg'
 import matchr from '../images/matchr-banner.jpg'
 import scheduler from '../images/scheduler-banner.jpg'
@@ -336,22 +335,6 @@ class Main extends React.Component {
         </article>
 
         <article
-          id="thanks"
-          className={`${this.props.article === 'thanks' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
-          style={{ display: 'none' }}
-        >
-          <h2 className="major">Thanks</h2>
-          <span className="image main">
-            <img src={pic02} alt="" />
-          </span>
-          <p>Your message has been succesfully submitted, thanks!!</p>
-          {icons}
-          {close}
-        </article>
-
-        <article
           id="about"
           className={`${this.props.article === 'about' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
@@ -359,8 +342,8 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">About</h2>
-          <span className="image main">
-            <img src={pic03} alt="" />
+          <span className="image main profile-pic">
+            <img className="profile"src={profile} alt="" />
           </span>
           <p>
             Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent

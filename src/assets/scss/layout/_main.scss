@@ -22,6 +22,18 @@
 		z-index: 3;
 		display: none;
 
+		.profile {
+			height: 20em;
+			width: 20em; 
+			align-self: center;
+		}
+
+		.profile-pic {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+
 		.portfolio-header {
 			display: flex;
 			flex-direction: row;
