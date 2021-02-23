@@ -16,6 +16,18 @@ import tinyappMobile from '../images/mobile-tinyapp-banner.jpg'
 import pdf from '../images/Resume.pdf'
 import FadeIn from 'react-fade-in'
 import { createMedia } from '@artsy/fresnel'
+import { FaReact } from '@react-icons/all-files/fa/FaReact'
+import { FaHtml5 } from '@react-icons/all-files/fa/FaHtml5'
+import { FaCss3 } from '@react-icons/all-files/fa/FaCss3'
+import { FaNodeJs } from '@react-icons/all-files/fa/FaNodeJs'
+import { FaBootstrap } from '@react-icons/all-files/fa/FaBootstrap'
+import { SiGatsby } from '@react-icons/all-files/si/SiGatsby'
+import { SiPostgresql } from '@react-icons/all-files/si/SiPostgresql'
+import { DiRuby } from '@react-icons/all-files/di/DiRuby'
+import { SiJquery } from '@react-icons/all-files/si/SiJquery'
+import { SiStorybook } from '@react-icons/all-files/si/SiStorybook'
+import { SiJest } from '@react-icons/all-files/si/SiJest'
+import { SiSass } from '@react-icons/all-files/si/SiSass'
 
 class Main extends React.Component {
   constructor(props) {
@@ -410,6 +422,7 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">About Me</h2>
+          <h2 className="minor">Profile</h2>
           <span className="image main profile-pic">
             <img className="profile" src={profile} alt="" />
           </span>
@@ -422,6 +435,59 @@ class Main extends React.Component {
             Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit
             amet.
           </p>
+          <h2 className="minor">Stack</h2>
+          <ul className="stack-list">
+            <li className="stack-li">
+              <a className="stack-link" href="https://reactjs.org/" target="_blank">
+                <h4 className="stack-header">React</h4>
+                <FaReact className="stack-icon" />
+              </a>
+            </li>
+            <li className="stack-li">
+              <h4 className="stack-header">HTML5</h4>
+              <FaHtml5 className="stack-icon" />
+            </li>
+            <li className="stack-li">
+              <h4 className="stack-header">CSS3</h4>
+              <FaCss3 className="stack-icon" />
+            </li>
+            <li className="stack-li">
+              <h4 className="stack-header">Node.js</h4>
+              <FaNodeJs className="stack-icon" />
+            </li>
+            <li className="stack-li">
+              <h4 className="stack-header">Bootstrap</h4>
+              <FaBootstrap className="stack-icon" />
+            </li>
+            <li className="stack-li">
+              <h4 className="stack-header">Gatsby.js</h4>
+              <SiGatsby className="stack-icon" />
+            </li>
+            <li className="stack-li">
+              <h4 className="stack-header">PostgreSQL</h4>
+              <SiPostgresql className="stack-icon" />
+            </li>
+            <li className="stack-li">
+              <h4 className="stack-header">Ruby</h4>
+              <DiRuby className="stack-icon" />
+            </li>
+            <li className="stack-li">
+              <h4 className="stack-header">Storybook</h4>
+              <SiStorybook className="stack-icon" />
+            </li>
+            <li className="stack-li">
+              <h4 className="stack-header">Jest</h4>
+              <SiJest className="stack-icon" />
+            </li>
+            <li className="stack-li">
+              <h4 className="stack-header">jQuery</h4>
+              <SiJquery className="stack-icon" />
+            </li>
+            <li className="stack-li">
+              <h4 className="stack-header">SASS</h4>
+              <SiSass className="stack-icon" />
+            </li>
+          </ul>
           <div className="about-contact">
             {icons}
             <button type="submit" onClick={() => window.open(pdf, '_blank')}>

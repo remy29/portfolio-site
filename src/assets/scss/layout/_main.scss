@@ -22,9 +22,41 @@
 		z-index: 3;
 		display: none;
 
+		.stack-icon {
+			height: 3em;
+			width: 3em;
+		}
+
+		.stack-link {
+			border-bottom: none;
+		}
+
+		.stack-header {
+			margin-bottom: 0.5em;
+		}
+
+		.stack-list {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			padding-left: 0;
+			justify-content: center;
+			margin-top: 2em;
+		}
+
+		.stack-li {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-left: 0;
+			height: 6em;
+			width: 6em;
+			margin-right: 1em;
+		}
+
 		.profile {
-			height: 20em;
-			width: 20em; 
+			height: 15em;
+			width: 15em; 
 			align-self: center;
 		}
 
