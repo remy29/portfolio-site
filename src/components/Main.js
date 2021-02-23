@@ -10,6 +10,7 @@ import tweeter from '../images/tweeter-banner.jpg'
 import tinyapp from '../images/tinyapp-banner.jpg'
 import pdf from '../images/Resume.pdf'
 import FadeIn from 'react-fade-in'
+import { createMedia } from "@artsy/fresnel"
 
 class Main extends React.Component {
   constructor(props) {
@@ -22,6 +23,15 @@ class Main extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.warningMessage = this.warningMessage.bind(this)
     this.warningMessageFade = this.warningMessageFade.bind(this)
+  }
+
+  mobileBanner = function () {
+    if (window !== undefined) {
+      if (window.innerWidth < 736) {
+        return tadooMobile
+      } 
+    }
+    return tadoo;
   }
 
   warningMessageFade = function(type) {}
@@ -80,12 +90,14 @@ class Main extends React.Component {
 
   render() {
 
-    const mobileBanner = function () {
-      if (window.innerWidth < 736) {
-        return tadooMobile
-      } 
-      return tadoo;
-    }
+    const { MediaContextProvider, Media } = createMedia({
+      breakpoints: {
+        sm: 0,
+        md: 736,
+        lg: 1280,
+        xl: 1680,
+      },
+    })
 
     let close = (
       <div
@@ -202,7 +214,14 @@ class Main extends React.Component {
           </div>
           <span className="image main">
             <a href="https://github.com/remy29/smart-to-do-list" target="_blank">
-              <img src={mobileBanner()} alt="" />
+              <MediaContextProvider>
+                <Media at="sm">
+                  <img src={tadooMobile} alt="" />
+                </Media>
+                <Media greaterThanOrEqual="md">
+                  <img src={tadoo} alt="" />
+                </Media>
+              </MediaContextProvider>
             </a>
           </span>
           <h3 className="minor">Stack</h3>
