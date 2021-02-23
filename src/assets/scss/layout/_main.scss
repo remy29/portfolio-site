@@ -29,6 +29,13 @@
 
 		.stack-link {
 			border-bottom: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-left: 0;
+			height: 6em;
+			width: 6em;
+			margin-right: 1em;
 		}
 
 		.stack-header {

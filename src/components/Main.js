@@ -438,54 +438,124 @@ class Main extends React.Component {
           <h2 className="minor">Stack</h2>
           <ul className="stack-list">
             <li className="stack-li">
-              <a className="stack-link" href="https://reactjs.org/" target="_blank">
+              <a
+                className="stack-link"
+                href="https://reactjs.org/"
+                target="_blank"
+              >
                 <h4 className="stack-header">React</h4>
                 <FaReact className="stack-icon" />
               </a>
             </li>
             <li className="stack-li">
-              <h4 className="stack-header">HTML5</h4>
-              <FaHtml5 className="stack-icon" />
+              <a
+                className="stack-link"
+                href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+                target="_blank"
+              >
+                <h4 className="stack-header">HTML5</h4>
+                <FaHtml5 className="stack-icon" />
+              </a>
             </li>
             <li className="stack-li">
-              <h4 className="stack-header">CSS3</h4>
-              <FaCss3 className="stack-icon" />
+              <a
+                className="stack-link"
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                target="_blank"
+              >
+                <h4 className="stack-header">CSS3</h4>
+                <FaCss3 className="stack-icon" />
+              </a>
             </li>
             <li className="stack-li">
-              <h4 className="stack-header">Node.js</h4>
-              <FaNodeJs className="stack-icon" />
+              <a
+                className="stack-link"
+                href="https://nodejs.org/"
+                target="_blank"
+              >
+                <h4 className="stack-header">Node.js</h4>
+                <FaNodeJs className="stack-icon" />
+              </a>
             </li>
             <li className="stack-li">
-              <h4 className="stack-header">Bootstrap</h4>
-              <FaBootstrap className="stack-icon" />
+              <a
+                className="stack-link"
+                href="https://getbootstrap.com/"
+                target="_blank"
+              >
+                <h4 className="stack-header">Bootstrap</h4>
+                <FaBootstrap className="stack-icon" />
+              </a>
             </li>
             <li className="stack-li">
-              <h4 className="stack-header">Gatsby.js</h4>
-              <SiGatsby className="stack-icon" />
+              <a
+                className="stack-link"
+                href="https://www.gatsbyjs.com/"
+                target="_blank"
+              >
+                <h4 className="stack-header">Gatsby.js</h4>
+                <SiGatsby className="stack-icon" />
+              </a>
             </li>
             <li className="stack-li">
-              <h4 className="stack-header">PostgreSQL</h4>
-              <SiPostgresql className="stack-icon" />
+              <a
+                className="stack-link"
+                href="https://www.postgresql.org/"
+                target="_blank"
+              >
+                <h4 className="stack-header">PostgreSQL</h4>
+                <SiPostgresql className="stack-icon" />
+              </a>
             </li>
             <li className="stack-li">
-              <h4 className="stack-header">Ruby</h4>
-              <DiRuby className="stack-icon" />
+              <a
+                className="stack-link"
+                href="https://www.ruby-lang.org/"
+                target="_blank"
+              >
+                <h4 className="stack-header">Ruby</h4>
+                <DiRuby className="stack-icon" />
+              </a>
             </li>
             <li className="stack-li">
-              <h4 className="stack-header">Storybook</h4>
-              <SiStorybook className="stack-icon" />
+              <a
+                className="stack-link"
+                href="https://storybook.js.org/"
+                target="_blank"
+              >
+                <h4 className="stack-header">Storybook</h4>
+                <SiStorybook className="stack-icon" />
+              </a>
             </li>
             <li className="stack-li">
-              <h4 className="stack-header">Jest</h4>
-              <SiJest className="stack-icon" />
+              <a
+                className="stack-link"
+                href="https://jestjs.io/"
+                target="_blank"
+              >
+                <h4 className="stack-header">Jest</h4>
+                <SiJest className="stack-icon" />
+              </a>
             </li>
             <li className="stack-li">
-              <h4 className="stack-header">jQuery</h4>
-              <SiJquery className="stack-icon" />
+              <a
+                className="stack-link"
+                href="https://jquery.com/"
+                target="_blank"
+              >
+                <h4 className="stack-header">jQuery</h4>
+                <SiJquery className="stack-icon" />
+              </a>
             </li>
             <li className="stack-li">
-              <h4 className="stack-header">SASS</h4>
-              <SiSass className="stack-icon" />
+              <a
+                className="stack-link"
+                href="https://sass-lang.com/"
+                target="_blank"
+              >
+                <h4 className="stack-header">SASS</h4>
+                <SiSass className="stack-icon" />
+              </a>
             </li>
           </ul>
           <div className="about-contact">
