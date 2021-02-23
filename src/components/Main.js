@@ -218,7 +218,7 @@ class Main extends React.Component {
                 <Media at="sm">
                   <img src={tadooMobile} alt="" />
                 </Media>
-                <Media greaterThanOrEqual="md">
+                <Media greaterThanOrEqual="lg">
                   <img src={tadoo} alt="" />
                 </Media>
               </MediaContextProvider>
