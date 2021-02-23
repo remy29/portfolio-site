@@ -70,8 +70,8 @@ class Main2 extends React.Component {
           className={"active timeout thanks"}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Thanks</h2>
-          <p>Thank You! <br /> Your message has been succesfully submitted. I will get in touch as soon as possible</p>
+          <h2 className="major">Message Submitted</h2>
+          <p>Thank You! <br /> Your message has been succesfully submitted. I will get in touch as soon as possible.</p>
           <div className="about-contact">
             {icons}
             <button type="submit" onClick={() => window.open(pdf, '_blank')}>
