@@ -93,9 +93,7 @@ class Main extends React.Component {
     const { MediaContextProvider, Media } = createMedia({
       breakpoints: {
         sm: 0,
-        md: 480,
-        lg: 736,
-        xl: 980,
+        md: 736,
       },
     })
 
@@ -218,7 +216,7 @@ class Main extends React.Component {
                 <Media at="sm">
                   <img src={tadooMobile} alt="" />
                 </Media>
-                <Media greaterThanOrEqual="lg">
+                <Media greaterThanOrEqual="md">
                   <img src={tadoo} alt="" />
                 </Media>
               </MediaContextProvider>
