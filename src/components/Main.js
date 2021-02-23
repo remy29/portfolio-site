@@ -4,13 +4,18 @@ import profile from '../images/Profile-Pic.png'
 import tadoo from '../images/tadoo-banner.jpg'
 import tadooMobile from '../images/mobile-tadoo-banner.jpg'
 import matchr from '../images/matchr-banner.jpg'
+import matchrMobile from '../images/mobile-matchr-banner.jpg'
 import scheduler from '../images/scheduler-banner.jpg'
+import schedulerMobile from '../images/mobile-scheduler-banner.jpg'
 import jungle from '../images/jungle-banner.jpg'
+import jungleMobile from '../images/mobile-jungle-banner.jpg'
 import tweeter from '../images/tweeter-banner.jpg'
+import tweeterMobile from '../images/mobile-tweeter-banner.jpg'
 import tinyapp from '../images/tinyapp-banner.jpg'
+import tinyappMobile from '../images/mobile-tinyapp-banner.jpg'
 import pdf from '../images/Resume.pdf'
 import FadeIn from 'react-fade-in'
-import { createMedia } from "@artsy/fresnel"
+import { createMedia } from '@artsy/fresnel'
 
 class Main extends React.Component {
   constructor(props) {
@@ -25,13 +30,13 @@ class Main extends React.Component {
     this.warningMessageFade = this.warningMessageFade.bind(this)
   }
 
-  mobileBanner = function () {
+  mobileBanner = function() {
     if (window !== undefined) {
       if (window.innerWidth < 736) {
         return tadooMobile
-      } 
+      }
     }
-    return tadoo;
+    return tadoo
   }
 
   warningMessageFade = function(type) {}
@@ -89,7 +94,7 @@ class Main extends React.Component {
   }
 
   render() {
-// weird
+    // weird
     const { MediaContextProvider, Media } = createMedia({
       breakpoints: {
         sm: 0,
@@ -106,29 +111,28 @@ class Main extends React.Component {
       ></div>
     )
 
-    const linkedInIcon = function (project) {
-
-      let link; 
+    const linkedInIcon = function(project) {
+      let link
 
       switch (project) {
-        case "Matchr": 
-          link = "https://github.com/remy29/matcher";
-          break;
-        case "Tadoo":
-          link = "https://github.com/remy29/smart-to-do-list";
-          break;
-        case "Jungle":
-          link = "https://github.com/remy29/jungle";
-          break;
-        case "Scheduler":
-          link = "https://github.com/remy29/scheduler";
-          break;
-        case "Tweeter":
-          link = "https://github.com/remy29/tweeter";
-          break;
-        case "TinyApp":
-          link = "https://github.com/remy29/tinyapp";
-          break;
+        case 'Matchr':
+          link = 'https://github.com/remy29/matcher'
+          break
+        case 'Tadoo':
+          link = 'https://github.com/remy29/smart-to-do-list'
+          break
+        case 'Jungle':
+          link = 'https://github.com/remy29/jungle'
+          break
+        case 'Scheduler':
+          link = 'https://github.com/remy29/scheduler'
+          break
+        case 'Tweeter':
+          link = 'https://github.com/remy29/tweeter'
+          break
+        case 'TinyApp':
+          link = 'https://github.com/remy29/tinyapp'
+          break
       }
 
       return (
@@ -208,10 +212,13 @@ class Main extends React.Component {
           <h2 className="major">Portfolio</h2>
           <div className="portfolio-header">
             <h2 className="minor">Tadoo</h2>
-            {linkedInIcon("Tadoo")}
+            {linkedInIcon('Tadoo')}
           </div>
           <span className="image main">
-            <a href="https://github.com/remy29/smart-to-do-list" target="_blank">
+            <a
+              href="https://github.com/remy29/smart-to-do-list"
+              target="_blank"
+            >
               <MediaContextProvider>
                 <Media at="sm">
                   <img src={tadooMobile} alt="" />
@@ -224,7 +231,8 @@ class Main extends React.Component {
           </span>
           <h3 className="minor">Stack</h3>
           <p>
-            Node.js / Express.js / HTML5 / SCSS / jQuery / jQuery UI / PostgreSQL 
+            Node.js / Express.js / HTML5 / SCSS / jQuery / jQuery UI /
+            PostgreSQL
           </p>
           <h3 className="minor">About</h3>
           <p>
@@ -238,16 +246,24 @@ class Main extends React.Component {
           </p>
           <div className="portfolio-header">
             <h2 className="minor">Matchr</h2>
-            {linkedInIcon("Matchr")}
+            {linkedInIcon('Matchr')}
           </div>
           <span className="image main">
             <a href="https://github.com/remy29/matcher" target="_blank">
-              <img src={matchr} alt="" />
+              <MediaContextProvider>
+                <Media at="sm">
+                  <img src={matchrMobile} alt="" />
+                </Media>
+                <Media greaterThanOrEqual="md">
+                  <img src={matchr} alt="" />
+                </Media>
+              </MediaContextProvider>
             </a>
           </span>
           <h3 className="minor">Stack</h3>
           <p>
-            Node.js / Express.js / HTML5 / SCSS / React / React Native / Sockets.io / PostgreSQL 
+            Node.js / Express.js / HTML5 / SCSS / React / React Native /
+            Sockets.io / PostgreSQL
           </p>
           <h3 className="minor">About</h3>
           <p>
@@ -261,16 +277,24 @@ class Main extends React.Component {
           </p>
           <div className="portfolio-header">
             <h2 className="minor">Jungle</h2>
-            {linkedInIcon("Jungle")}
+            {linkedInIcon('Jungle')}
           </div>
           <span className="image main">
             <a href="https://github.com/remy29/jungle" target="_blank">
-              <img src={jungle} alt="" />
-            </a>  
+              <MediaContextProvider>
+                <Media at="sm">
+                  <img src={jungleMobile} alt="" />
+                </Media>
+                <Media greaterThanOrEqual="md">
+                  <img src={jungle} alt="" />
+                </Media>
+              </MediaContextProvider>
+            </a>
           </span>
           <h3 className="minor">Stack</h3>
           <p>
-            Ruby on Rails / bcrypt / Bootstrap / Capybara / Poltergeist / Rspec / PostgreSQL
+            Ruby on Rails / bcrypt / Bootstrap / Capybara / Poltergeist / Rspec
+            / PostgreSQL
           </p>
           <h3 className="minor">About</h3>
           <p>
@@ -284,16 +308,24 @@ class Main extends React.Component {
           </p>
           <div className="portfolio-header">
             <h2 className="minor">Scheduler</h2>
-            {linkedInIcon("Scheduler")}
+            {linkedInIcon('Scheduler')}
           </div>
           <span className="image main">
             <a href="https://github.com/remy29/scheduler" target="_blank">
-              <img src={scheduler} alt="" />
-            </a>  
+              <MediaContextProvider>
+                <Media at="sm">
+                  <img src={schedulerMobile} alt="" />
+                </Media>
+                <Media greaterThanOrEqual="md">
+                  <img src={scheduler} alt="" />
+                </Media>
+              </MediaContextProvider>
+            </a>
           </span>
           <h3 className="minor">Stack</h3>
           <p>
-            React / Axios / Express.js / Classnames / Normalize / Storybook / PostgreSQL
+            React / Axios / Express.js / Classnames / Normalize / Storybook /
+            PostgreSQL
           </p>
           <h3 className="minor">About</h3>
           <p>
@@ -307,17 +339,22 @@ class Main extends React.Component {
           </p>
           <div className="portfolio-header">
             <h2 className="minor">Tweeter</h2>
-            {linkedInIcon("Tweeter")}
+            {linkedInIcon('Tweeter')}
           </div>
           <span className="image main">
             <a href="https://github.com/remy29/tweeter" target="_blank">
-              <img src={tweeter} alt="" />
-            </a>   
+              <MediaContextProvider>
+                <Media at="sm">
+                  <img src={tweeterMobile} alt="" />
+                </Media>
+                <Media greaterThanOrEqual="md">
+                  <img src={tweeter} alt="" />
+                </Media>
+              </MediaContextProvider>
+            </a>
           </span>
           <h3 className="minor">Stack</h3>
-          <p>
-            Node.js / Express.js / jQuery / PostgreSQL
-          </p>
+          <p>Node.js / Express.js / jQuery / PostgreSQL</p>
           <h3 className="minor">About</h3>
           <p>
             Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
@@ -330,17 +367,22 @@ class Main extends React.Component {
           </p>
           <div className="portfolio-header">
             <h2 className="minor">TinyApp</h2>
-            {linkedInIcon("TinyApp")}
+            {linkedInIcon('TinyApp')}
           </div>
           <span className="image main">
             <a href="https://github.com/remy29/tinyapp" target="_blank">
-              <img src={tinyapp} alt="" />
-            </a>   
+              <MediaContextProvider>
+                <Media at="sm">
+                  <img src={tinyappMobile} alt="" />
+                </Media>
+                <Media greaterThanOrEqual="md">
+                  <img src={tinyapp} alt="" />
+                </Media>
+              </MediaContextProvider>
+            </a>
           </span>
           <h3 className="minor">Stack</h3>
-          <p>
-            Node.js / Express.js / Morgan / EJS / bcrypt
-          </p>
+          <p>Node.js / Express.js / Morgan / EJS / bcrypt</p>
           <h3 className="minor">About</h3>
           <p>
             Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
@@ -369,7 +411,7 @@ class Main extends React.Component {
         >
           <h2 className="major">About Me</h2>
           <span className="image main profile-pic">
-            <img className="profile"src={profile} alt="" />
+            <img className="profile" src={profile} alt="" />
           </span>
           <p>
             Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
