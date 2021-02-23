@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import profile from '../images/Profile-Pic.png'
 import tadoo from '../images/tadoo-banner.jpg'
+import tadooMobile from '../images/mobile-tadoo-banner.jpg'
 import matchr from '../images/matchr-banner.jpg'
 import scheduler from '../images/scheduler-banner.jpg'
 import jungle from '../images/jungle-banner.jpg'
@@ -78,6 +79,14 @@ class Main extends React.Component {
   }
 
   render() {
+
+    const mobileBanner = function () {
+      if (window.innerWidth < 736) {
+        return tadooMobile
+      } 
+      return tadoo;
+    }
+
     let close = (
       <div
         className="close"
@@ -193,7 +202,7 @@ class Main extends React.Component {
           </div>
           <span className="image main">
             <a href="https://github.com/remy29/smart-to-do-list" target="_blank">
-              <img src={tadoo} alt="" />
+              <img src={mobileBanner()} alt="" />
             </a>
           </span>
           <h3 className="minor">Stack</h3>
