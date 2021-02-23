@@ -110,7 +110,7 @@ class Main extends React.Component {
     const { MediaContextProvider, Media } = createMedia({
       breakpoints: {
         sm: 0,
-        md: 736,
+        md: 1025,
       },
     })
 
