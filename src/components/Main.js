@@ -107,6 +107,13 @@ class Main extends React.Component {
   }
 
   render() {
+    const neverTrue = false;
+
+    const noReturn = function () {
+      if (neverTrue === true) {
+        return landing
+      }
+    }
     // weird
     const { MediaContextProvider, Media } = createMedia({
       breakpoints: {
@@ -215,6 +222,7 @@ class Main extends React.Component {
         id="main"
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
+        {noReturn()}
         {/* PORTFOLIO */}
 
         <article
