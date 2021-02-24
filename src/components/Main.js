@@ -214,10 +214,7 @@ class Main extends React.Component {
         id="main"
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
-
-
         {/* PORTFOLIO */}
-
 
         <article
           id="portfolio"
@@ -253,13 +250,12 @@ class Main extends React.Component {
           </p>
           <h3 className="minor">About</h3>
           <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
+            Automagically sorting to-do list application. Using a custom-built
+            algorithm, Tadoo makes a series of API calls and sorts the user’s
+            to-dos into one of four categories: to eat, to read, to watch, or to
+            buy. It uses PostgreSQL to archive past to-do's, which are
+            accessible on an archive page. A smooth user experience is delivered
+            using jQuery for animations and transitions.
           </p>
           <div className="portfolio-header">
             <h2 className="minor">Matchr</h2>
@@ -284,13 +280,15 @@ class Main extends React.Component {
           </p>
           <h3 className="minor">About</h3>
           <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
+            Matchr is an app allowing two or more users can connect and begin
+            matching restaurants where they may want to eat. After selecting a
+            category, a call is made to the yelp API, which returns a list of
+            the most popular restaurants in the user’s area for that category.
+            On a tinder-style interface, the users then approve or disapproves
+            of each restaurant. When a match is found, WebSockets are employed
+            to instantly notify all connected users. Past matches with each user
+            are then stored in a PostgreSQL database and displayed on a past
+            matches page.
           </p>
           <div className="portfolio-header">
             <h2 className="minor">Jungle</h2>
@@ -315,13 +313,11 @@ class Main extends React.Component {
           </p>
           <h3 className="minor">About</h3>
           <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
+            Jungle is an e-commerce platform built with Ruby on Rails
+            server-side web app framework. Unit testing is handled using Rspec.
+            Integration / End-to-end tests are automated using Capybara combined
+            with a headless Poletgeist browser. Jungle uses the Stripe API that
+            handles payments.
           </p>
           <div className="portfolio-header">
             <h2 className="minor">Scheduler</h2>
@@ -342,17 +338,15 @@ class Main extends React.Component {
           <h3 className="minor">Stack</h3>
           <p>
             React / Axios / Express.js / Classnames / Normalize / Storybook /
-            PostgreSQL / Jest / Cypress 
+            PostgreSQL / Jest / Cypress
           </p>
           <h3 className="minor">About</h3>
           <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
+            Scheduler is a simple appointment scheduling app built on a React
+            frontend and a Node.js backend. Storybook was employed to
+            procedurally develop each React component. The app is tested
+            extensively using Jest for unit and integration testing. Cypress is
+            used for automated end-to-end testing.
           </p>
           <div className="portfolio-header">
             <h2 className="minor">Tweeter</h2>
@@ -374,13 +368,9 @@ class Main extends React.Component {
           <p>Node.js / Express.js / jQuery / PostgreSQL</p>
           <h3 className="minor">About</h3>
           <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
+            Tweeter is a simple, single-page Twitter clone. A project using
+            HTML, CSS, JS, jQuery, and AJAX on the front-end / Node.js, Express,
+            and MongoDB on the back end.
           </p>
           <div className="portfolio-header">
             <h2 className="minor">TinyApp</h2>
@@ -402,13 +392,9 @@ class Main extends React.Component {
           <p>Node.js / Express.js / Morgan / EJS / bcrypt</p>
           <h3 className="minor">About</h3>
           <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
+            TinyApp is a full-stack web application built with Node and Express
+            that allows users to shorten long URLs. Works similarly to Bit.ly,
+            TinyURL and others.
           </p>
           <div className="about-contact">
             {icons}
@@ -419,9 +405,7 @@ class Main extends React.Component {
           {close}
         </article>
 
-
         {/* ABOUT */}
-
 
         <article
           id="about"
@@ -576,9 +560,7 @@ class Main extends React.Component {
           {close}
         </article>
 
-
         {/* CONTACT */}
-
 
         <article
           id="contact"
