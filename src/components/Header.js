@@ -17,7 +17,7 @@ const Header = props => (
     <nav>
       <ul>
         <li>
-          <button
+          <button className="about-me-button"
             onClick={() => {
               props.onOpenArticle('about')
             }}
