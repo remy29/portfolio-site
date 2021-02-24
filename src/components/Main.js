@@ -214,6 +214,11 @@ class Main extends React.Component {
         id="main"
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
+
+
+        {/* PORTFOLIO */}
+
+
         <article
           id="portfolio"
           className={`${this.props.article === 'portfolio' ? 'active' : ''} ${
@@ -414,6 +419,10 @@ class Main extends React.Component {
           {close}
         </article>
 
+
+        {/* ABOUT */}
+
+
         <article
           id="about"
           className={`${this.props.article === 'about' ? 'active' : ''} ${
@@ -566,6 +575,10 @@ class Main extends React.Component {
           </div>
           {close}
         </article>
+
+
+        {/* CONTACT */}
+
 
         <article
           id="contact"
