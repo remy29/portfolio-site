@@ -342,7 +342,7 @@ class Main extends React.Component {
           <h3 className="minor">Stack</h3>
           <p>
             React / Axios / Express.js / Classnames / Normalize / Storybook /
-            PostgreSQL
+            PostgreSQL / Jest / Cypress 
           </p>
           <h3 className="minor">About</h3>
           <p>
