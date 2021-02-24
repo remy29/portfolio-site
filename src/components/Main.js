@@ -107,13 +107,6 @@ class Main extends React.Component {
   }
 
   render() {
-    const neverTrue = false;
-
-    const noReturn = function () {
-      if (neverTrue === true) {
-        return landing
-      }
-    }
     // weird
     const { MediaContextProvider, Media } = createMedia({
       breakpoints: {
@@ -222,7 +215,9 @@ class Main extends React.Component {
         id="main"
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
-        {noReturn()}
+        <img src={landing} style={{ display: 'none' }} />
+
+        
         {/* PORTFOLIO */}
 
         <article
@@ -271,7 +266,11 @@ class Main extends React.Component {
             {linkedInIcon('Matchr')}
           </div>
           <span className="image main">
-            <a href="https://github.com/remy29/matcher" target="_blank">
+            <a 
+              href="https://github.com/remy29/matcher" 
+              target="_blank"
+              rel="noreferrer"
+            >
               <MediaContextProvider>
                 <Media at="sm">
                   <img src={matchrMobile} alt="" />
@@ -304,7 +303,11 @@ class Main extends React.Component {
             {linkedInIcon('Jungle')}
           </div>
           <span className="image main">
-            <a href="https://github.com/remy29/jungle" target="_blank">
+            <a 
+              href="https://github.com/remy29/jungle" 
+              target="_blank"
+              rel="noreferrer"
+            >
               <MediaContextProvider>
                 <Media at="sm">
                   <img src={jungleMobile} alt="" />
@@ -333,7 +336,11 @@ class Main extends React.Component {
             {linkedInIcon('Scheduler')}
           </div>
           <span className="image main">
-            <a href="https://github.com/remy29/scheduler" target="_blank">
+            <a 
+              href="https://github.com/remy29/scheduler" 
+              target="_blank"
+              rel="noreferrer"
+            >
               <MediaContextProvider>
                 <Media at="sm">
                   <img src={schedulerMobile} alt="" />
@@ -362,7 +369,11 @@ class Main extends React.Component {
             {linkedInIcon('Tweeter')}
           </div>
           <span className="image main">
-            <a href="https://github.com/remy29/tweeter" target="_blank">
+            <a 
+              href="https://github.com/remy29/tweeter" 
+              target="_blank"
+              rel="noreferrer"
+            >
               <MediaContextProvider>
                 <Media at="sm">
                   <img src={tweeterMobile} alt="" />
@@ -386,7 +397,11 @@ class Main extends React.Component {
             {linkedInIcon('TinyApp')}
           </div>
           <span className="image main">
-            <a href="https://github.com/remy29/tinyapp" target="_blank">
+            <a 
+              href="https://github.com/remy29/tinyapp" 
+              target="_blank"
+              rel="noreferrer"
+            >
               <MediaContextProvider>
                 <Media at="sm">
                   <img src={tinyappMobile} alt="" />
@@ -441,6 +456,7 @@ class Main extends React.Component {
                 className="stack-link"
                 href="https://reactjs.org/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <h4 className="stack-header">React</h4>
                 <FaReact className="stack-icon" />
@@ -451,6 +467,7 @@ class Main extends React.Component {
                 className="stack-link"
                 href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
                 target="_blank"
+                rel="noreferrer"
               >
                 <h4 className="stack-header">HTML5</h4>
                 <FaHtml5 className="stack-icon" />

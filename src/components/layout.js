@@ -41,7 +41,7 @@ const Layout = ({ children, location }) => {
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
-              { property: 'og:image', content: '../images/landing.png' },
+              { property: 'og:image', content: 'https://www.arthur-remy.com/static/landing-c3a7805bea25ea89239ae1e4ee2be5ba.png' },
              /*  { property: 'Arthur Remy - Portfolio Site', content: 'Portfolio' },
               { property: 'Arthur Remy - Portfolio Site', content: 'Portfolio' },
               { property: 'Arthur Remy - Portfolio Site', content: 'Portfolio' }, */
