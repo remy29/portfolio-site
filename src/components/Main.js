@@ -447,7 +447,7 @@ class Main extends React.Component {
             <br />
             I'm a web developer knowledgeable in both front and back end
             development with a unique background, and a passion for learning and
-            programming. I am detail-oriented, dependable, and write
+            programming. I am detail-oriented, dependable, and write clean, easy to read code.
           </p>
           <p className="about-paragraph">
             Not so long ago I made beer and sake for a living, now I make
