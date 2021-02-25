@@ -459,6 +459,7 @@ class Main extends React.Component {
             roles. Please do not hesitate to reach out on the site's contact
             page.
           </p>
+          <div className="stack">
           <h2 className="minor">Stack</h2>
           <ul className="stack-list">
             <li className="stack-li">
@@ -590,6 +591,7 @@ class Main extends React.Component {
               Resume
             </button>
           </div>
+        </div>
           {close}
         </article>
 
