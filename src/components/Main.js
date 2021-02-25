@@ -452,7 +452,7 @@ class Main extends React.Component {
           <p className="about-paragraph">
             Not so long ago I made beer and sake for a living, now I make
             websites and apps. The main thing is that I'm always honing my
-            skills, making things, learning things and always growing.
+            skills, making things, learning things and continually growing.
           </p>
           <p className="about-paragraph">
             I'm located in Vancouver, BC, and am open to permanent and contract
