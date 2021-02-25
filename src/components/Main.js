@@ -459,7 +459,7 @@ class Main extends React.Component {
             roles. Please do not hesitate to reach out on the site's contact
             page.
           </p>
-          <h2 className="minor stack-header">Stack</h2>
+          <h2 className="minor">Stack</h2>
           <ul className="stack-list">
             <li className="stack-li">
               <a
