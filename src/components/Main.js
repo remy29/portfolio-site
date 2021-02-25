@@ -448,17 +448,16 @@ class Main extends React.Component {
             I'm a web developer knowledgeable in both front and back end
             development with a unique background, and a passion for learning and
             programming. I am detail-oriented, dependable, and write
-            beautiful, easy to read code.
           </p>
           <p className="about-paragraph">
-            Not so long ago I made beer and sake for a living, now I make websites and apps. 
-            The main thing is that I'm always honing my skills, making
-            things, learning things, and always growing.
+            Not so long ago I made beer and sake for a living, now I make
+            websites and apps. The main thing is that I'm always honing my
+            skills, making things, learning things and always growing.
           </p>
           <p className="about-paragraph">
-            I'm located in Vancouver, BC and am open to permanent or contract
-            positions. Please do not hesistate to reach out on the site's
-            contact page.
+            I'm located in Vancouver, BC, and am open to permanent or contract
+            positions. Please do not hesitate to reach out on the site's contact
+            page.
           </p>
           <h2 className="minor">Stack</h2>
           <ul className="stack-list">
