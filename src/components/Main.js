@@ -217,7 +217,6 @@ class Main extends React.Component {
       >
         <img src={landing} style={{ display: 'none' }} />
 
-
         {/* PORTFOLIO */}
 
         <article
@@ -266,8 +265,8 @@ class Main extends React.Component {
             {linkedInIcon('Matchr')}
           </div>
           <span className="image main">
-            <a 
-              href="https://github.com/remy29/matcher" 
+            <a
+              href="https://github.com/remy29/matcher"
               target="_blank"
               rel="noreferrer"
             >
@@ -303,8 +302,8 @@ class Main extends React.Component {
             {linkedInIcon('Jungle')}
           </div>
           <span className="image main">
-            <a 
-              href="https://github.com/remy29/jungle" 
+            <a
+              href="https://github.com/remy29/jungle"
               target="_blank"
               rel="noreferrer"
             >
@@ -336,8 +335,8 @@ class Main extends React.Component {
             {linkedInIcon('Scheduler')}
           </div>
           <span className="image main">
-            <a 
-              href="https://github.com/remy29/scheduler" 
+            <a
+              href="https://github.com/remy29/scheduler"
               target="_blank"
               rel="noreferrer"
             >
@@ -369,8 +368,8 @@ class Main extends React.Component {
             {linkedInIcon('Tweeter')}
           </div>
           <span className="image main">
-            <a 
-              href="https://github.com/remy29/tweeter" 
+            <a
+              href="https://github.com/remy29/tweeter"
               target="_blank"
               rel="noreferrer"
             >
@@ -397,8 +396,8 @@ class Main extends React.Component {
             {linkedInIcon('TinyApp')}
           </div>
           <span className="image main">
-            <a 
-              href="https://github.com/remy29/tinyapp" 
+            <a
+              href="https://github.com/remy29/tinyapp"
               target="_blank"
               rel="noreferrer"
             >
@@ -443,11 +442,23 @@ class Main extends React.Component {
           <span className="image main profile-pic">
             <img className="profile" src={profile} alt="" />
           </span>
-          <p>
-            Skilled web developer knowledgeable in both front and back end
-            development, with a unique background in brewing, and a passion for
-            learning and all things code. I am detail-oriented, dependable, and
-            write beautiful, well-organized code.
+          <p className="about-paragraph">
+            Hi I'm Arthur,
+            <br />
+            I'm a web developer knowledgeable in both front and back end
+            development with a unique background, and a passion for learning and
+            programming. I am detail-oriented, dependable, and write
+            beautiful, easy to read code.
+          </p>
+          <p className="about-paragraph">
+            Not so long ago I made beer and sake for a living, now I make websites and apps. 
+            The main thing is that I'm always honing my skills, making
+            things, learning things, and always growing.
+          </p>
+          <p className="about-paragraph">
+            I'm located in Vancouver, BC and am open to permanent or contract
+            positions. Please do not hesistate to reach out on the site's
+            contact page.
           </p>
           <h2 className="minor">Stack</h2>
           <ul className="stack-list">

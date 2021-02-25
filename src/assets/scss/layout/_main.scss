@@ -103,6 +103,12 @@
 			width: 80%;
 		}
 
+		.about-paragraph {
+			margin: 0 0 1rem 0 !important;
+		}
+
+		
+
 		article {
 			@include vendor('transform', 'translateY(0.25rem)');
 			@include vendor('transition', (
