@@ -320,7 +320,7 @@ class Main extends React.Component {
           <h3 className="minor">Stack</h3>
           <p>
             Ruby on Rails / bcrypt / Bootstrap / Capybara / Poltergeist / Rspec
-            / PostgreSQL
+            / PostgreSQL / HTML5 / SCSS
           </p>
           <h3 className="minor">About</h3>
           <p>
@@ -353,7 +353,7 @@ class Main extends React.Component {
           <h3 className="minor">Stack</h3>
           <p>
             React / Axios / Express.js / Classnames / Normalize / Storybook /
-            PostgreSQL / Jest / Cypress
+            PostgreSQL / Jest / Cypress / HTML5 / SCSS
           </p>
           <h3 className="minor">About</h3>
           <p>
@@ -384,7 +384,7 @@ class Main extends React.Component {
             </a>
           </span>
           <h3 className="minor">Stack</h3>
-          <p>Node.js / Express.js / jQuery / PostgreSQL</p>
+          <p>Node.js / Express.js / jQuery / PostgreSQL / HTML5 / CSS3</p>
           <h3 className="minor">About</h3>
           <p>
             Tweeter is a simple, single-page Twitter clone. A project using
@@ -412,7 +412,7 @@ class Main extends React.Component {
             </a>
           </span>
           <h3 className="minor">Stack</h3>
-          <p>Node.js / Express.js / Morgan / EJS / bcrypt</p>
+          <p>Node.js / Express.js / Morgan / EJS / bcrypt / HTML5 / CCS3</p>
           <h3 className="minor">About</h3>
           <p>
             TinyApp is a full-stack web application built with Node and Express
