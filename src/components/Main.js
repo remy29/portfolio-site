@@ -455,8 +455,8 @@ class Main extends React.Component {
             skills, making things, learning things and always growing.
           </p>
           <p className="about-paragraph">
-            I'm located in Vancouver, BC, and am open to permanent or contract
-            positions. Please do not hesitate to reach out on the site's contact
+            I'm located in Vancouver, BC, and am open to permanent and contract
+            roles. Please do not hesitate to reach out on the site's contact
             page.
           </p>
           <h2 className="minor">Stack</h2>
