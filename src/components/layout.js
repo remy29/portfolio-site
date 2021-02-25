@@ -41,11 +41,11 @@ const Layout = ({ children, location }) => {
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
-              { property: 'og:image', content: 'https://www.arthur-remy.com/static/landing-c3a7805bea25ea89239ae1e4ee2be5ba.png' },
+              { property: 'og:image', content: 'https://www.arthur-remy.com/static/landing-85a172d7f0f9d4182750a0cb787905e2.jpg' },
               { property: 'og:image:type', content: 'image/png' },
               { property: 'og:image:width', content: '1024' },
               { property: 'og:image:heigth', content: '545' },
-              { property: "og:description", content: "Website description." },
+              { property: "og:description", content: "Simple site built with Gatsby.js showcasing my portfolio" },
             ]}
           >
             <html lang="en" />

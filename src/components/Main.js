@@ -8,7 +8,7 @@ import matchrMobile from '../images/mobile-matchr-banner.jpg'
 import scheduler from '../images/scheduler-banner.jpg'
 import schedulerMobile from '../images/mobile-scheduler-banner.jpg'
 import jungle from '../images/jungle-banner.jpg'
-import landing from '../images/landing.png'
+import landing from '../images/landing.jpg'
 import jungleMobile from '../images/mobile-jungle-banner.jpg'
 import tweeter from '../images/tweeter-banner.jpg'
 import tweeterMobile from '../images/mobile-tweeter-banner.jpg'
@@ -217,7 +217,7 @@ class Main extends React.Component {
       >
         <img src={landing} style={{ display: 'none' }} />
 
-        
+
         {/* PORTFOLIO */}
 
         <article
