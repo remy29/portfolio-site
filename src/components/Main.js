@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import profile from '../images/Profile-Pic1.png'
+import profile from '../images/Profile-Pic.png'
 import tadoo from '../images/tadoo-banner.jpg'
 import tadooMobile from '../images/mobile-tadoo-banner.jpg'
 import matchr from '../images/matchr-banner.jpg'
