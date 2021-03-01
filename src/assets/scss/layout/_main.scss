@@ -107,6 +107,10 @@
 			margin: 0 0 1rem 0 !important;
 		}
 
+		#about {
+			padding: 4.5rem 2rem 1.5rem 2rem;
+		}
+
 		article {
 			@include vendor('transform', 'translateY(0.25rem)');
 			@include vendor('transition', (

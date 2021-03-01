@@ -29,6 +29,7 @@ import { SiJquery } from '@react-icons/all-files/si/SiJquery'
 import { SiStorybook } from '@react-icons/all-files/si/SiStorybook'
 import { SiJest } from '@react-icons/all-files/si/SiJest'
 import { SiSass } from '@react-icons/all-files/si/SiSass'
+import { SiJava } from '@react-icons/all-files/si/SiJava'
 
 class Main extends React.Component {
   constructor(props) {
@@ -215,7 +216,7 @@ class Main extends React.Component {
         id="main"
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
-        <img src={landing} style={{ display: 'none' }} />
+        <img src={landing} alt="Img not found" style={{ display: 'none' }} />
 
         {/* PORTFOLIO */}
 
@@ -582,6 +583,16 @@ class Main extends React.Component {
               >
                 <h4 className="stack-header">SASS</h4>
                 <SiSass className="stack-icon" />
+              </a>
+            </li>
+            <li className="stack-li">
+              <a
+                className="stack-link"
+                href="https://www.java.com/"
+                target="_blank"
+              >
+                <h4 className="stack-header">Java</h4>
+                <SiJava className="stack-icon" />
               </a>
             </li>
           </ul>
