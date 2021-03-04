@@ -30,6 +30,7 @@ import { SiStorybook } from '@react-icons/all-files/si/SiStorybook'
 import { SiJest } from '@react-icons/all-files/si/SiJest'
 import { SiSass } from '@react-icons/all-files/si/SiSass'
 import { SiJava } from '@react-icons/all-files/si/SiJava'
+import { FaPython } from '@react-icons/all-files/fa/FaPython'
 
 class Main extends React.Component {
   constructor(props) {
@@ -593,6 +594,16 @@ class Main extends React.Component {
               >
                 <h4 className="stack-header">Java</h4>
                 <SiJava className="stack-icon" />
+              </a>
+            </li>
+            <li className="stack-li">
+              <a
+                className="stack-link"
+                href="https://www.python.org/"
+                target="_blank"
+              >
+                <h4 className="stack-header">Python</h4>
+                <FaPython className="stack-icon" />
               </a>
             </li>
           </ul>
