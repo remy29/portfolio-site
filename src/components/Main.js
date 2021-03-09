@@ -31,6 +31,7 @@ import { SiJest } from '@react-icons/all-files/si/SiJest'
 import { SiSass } from '@react-icons/all-files/si/SiSass'
 import { SiJava } from '@react-icons/all-files/si/SiJava'
 import { FaPython } from '@react-icons/all-files/fa/FaPython'
+import { SiJavascript } from '@react-icons/all-files/si/SiJavascript'
 
 class Main extends React.Component {
   constructor(props) {
@@ -478,27 +479,6 @@ class Main extends React.Component {
             <li className="stack-li">
               <a
                 className="stack-link"
-                href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <h4 className="stack-header">HTML5</h4>
-                <FaHtml5 className="stack-icon" />
-              </a>
-            </li>
-            <li className="stack-li">
-              <a
-                className="stack-link"
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-                target="_blank"
-              >
-                <h4 className="stack-header">CSS3</h4>
-                <FaCss3 className="stack-icon" />
-              </a>
-            </li>
-            <li className="stack-li">
-              <a
-                className="stack-link"
                 href="https://nodejs.org/"
                 target="_blank"
               >
@@ -534,16 +514,6 @@ class Main extends React.Component {
               >
                 <h4 className="stack-header">PostgreSQL</h4>
                 <SiPostgresql className="stack-icon" />
-              </a>
-            </li>
-            <li className="stack-li">
-              <a
-                className="stack-link"
-                href="https://www.ruby-lang.org/"
-                target="_blank"
-              >
-                <h4 className="stack-header">Ruby</h4>
-                <DiRuby className="stack-icon" />
               </a>
             </li>
             <li className="stack-li">
@@ -589,6 +559,27 @@ class Main extends React.Component {
             <li className="stack-li">
               <a
                 className="stack-link"
+                href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h4 className="stack-header">HTML5</h4>
+                <FaHtml5 className="stack-icon" />
+              </a>
+            </li>
+            <li className="stack-li">
+              <a
+                className="stack-link"
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                target="_blank"
+              >
+                <h4 className="stack-header">CSS3</h4>
+                <FaCss3 className="stack-icon" />
+              </a>
+            </li>
+            <li className="stack-li">
+              <a
+                className="stack-link"
                 href="https://www.java.com/"
                 target="_blank"
               >
@@ -604,6 +595,26 @@ class Main extends React.Component {
               >
                 <h4 className="stack-header">Python</h4>
                 <FaPython className="stack-icon" />
+              </a>
+            </li>
+            <li className="stack-li">
+              <a
+                className="stack-link"
+                href="https://www.python.org/"
+                target="_blank"
+              >
+                <h4 className="stack-header">Javascript</h4>
+                <SiJavascript className="stack-icon" />
+              </a>
+            </li>
+            <li className="stack-li">
+              <a
+                className="stack-link"
+                href="https://www.ruby-lang.org/"
+                target="_blank"
+              >
+                <h4 className="stack-header">Ruby</h4>
+                <DiRuby className="stack-icon" />
               </a>
             </li>
           </ul>
