@@ -607,7 +607,7 @@ class Main extends React.Component {
                 <SiJavascript className="stack-icon" />
               </a>
             </li>
-            {/* <li className="stack-li">
+            <li className="stack-li">
               <a
                 className="stack-link"
                 href="https://www.ruby-lang.org/"
@@ -616,7 +616,7 @@ class Main extends React.Component {
                 <h4 className="stack-header">Ruby</h4>
                 <DiRuby className="stack-icon" />
               </a>
-            </li> */}
+            </li>
           </ul>
           <div className="about-contact">
             {icons}
